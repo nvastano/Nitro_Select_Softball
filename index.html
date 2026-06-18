@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nitro Select Softball</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── NAV ──────────────────────────────────────────────── -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">
+        <span class="logo-nitro">NITRO</span><span class="logo-select">SELECT</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#roster">Roster</a></li>
+        <li><a href="#schedule">Schedule</a></li>
+        <li><a href="#tryouts">Tryouts</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="flyer.pdf" class="btn-nav" target="_blank">Team Flyer</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── HERO ─────────────────────────────────────────────── -->
+  <section id="home" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Nitro Select Softball</p>
+      <h1 class="hero-headline">The Next Wave<br>Is Here.</h1>
+      <p class="hero-sub">Developing Athletes. Building Champions. — 14U elite travel softball.</p>
+      <div class="hero-cta">
+        <a href="#roster" class="btn-primary">Meet the Team</a>
+        <a href="#schedule" class="btn-outline">View Schedule</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ABOUT ─────────────────────────────────────────────── -->
+  <section id="about" class="about section">
+    <div class="container">
+      <h2 class="section-title">About the Program</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            <!-- Replace with Pedro's coaching bio / program philosophy -->
+            Nitro Select is a competitive travel softball program based in [City, State], led by
+            Coach Pedro [Last Name]. Our mission is to develop elite athletes both on and off the
+            field — building the character, work ethic, and skills college programs are looking for.
+          </p>
+          <p>
+            We compete at the highest level of travel ball, giving our players maximum exposure to
+            college coaches throughout the season.
+          </p>
+          <p class="about-motto"><em>Compete. Grow. Belong. — One Team. One Goal.</em></p>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card">
+            <span class="stat-num"><!-- # --></span>
+            <span class="stat-label">Players</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num"><!-- GPA --></span>
+            <span class="stat-label">Team GPA</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num"><!-- # --></span>
+            <span class="stat-label">Tournaments</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">14U</span>
+            <span class="stat-label">Age Group</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ROSTER ────────────────────────────────────────────── -->
+  <section id="roster" class="roster section section-dark">
+    <div class="container">
+      <h2 class="section-title">2025 Roster</h2>
+      <p class="section-sub">Click a player to view full profile and contact info.</p>
+
+      <div class="roster-grid">
+
+        <!-- Player card — duplicate and fill in for each player -->
+        <div class="player-card">
+          <div class="player-photo-wrap">
+            <img src="assets/images/player-placeholder.jpg" alt="Player Name" class="player-photo" />
+            <span class="player-number">#00</span>
+          </div>
+          <div class="player-info">
+            <h3 class="player-name">Player Name</h3>
+            <p class="player-pos">Position</p>
+            <p class="player-school">School Name · Class of 20XX</p>
+            <p class="player-gpa">GPA: 0.0</p>
+            <div class="player-links">
+              <a href="mailto:player@email.com" class="pill pill-email">Email</a>
+              <a href="https://instagram.com/" class="pill pill-ig" target="_blank">Instagram</a>
+            </div>
+          </div>
+        </div>
+        <!-- /Player card -->
+
+      </div>
+
+      <!-- Coaching staff -->
+      <h3 class="staff-heading">Coaching Staff</h3>
+      <div class="staff-grid">
+        <div class="staff-card">
+          <img src="assets/images/coach-placeholder.jpg" alt="Coach Pedro" class="staff-photo" />
+          <div>
+            <p class="staff-name">Coach Pedro [Last Name]</p>
+            <p class="staff-role">Head Coach</p>
+            <a href="mailto:coach@email.com" class="pill pill-email">Email</a>
+            <a href="tel:+10000000000" class="pill pill-phone">Call / Text</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SCHEDULE ──────────────────────────────────────────── -->
+  <section id="schedule" class="schedule section">
+    <div class="container">
+      <h2 class="section-title">2025 Schedule</h2>
+
+      <!-- Next tournament spotlight -->
+      <div class="next-tourney">
+        <p class="next-label">Next Tournament</p>
+        <h3 class="next-name">Tournament Name</h3>
+        <p class="next-meta">📍 City, State &nbsp;·&nbsp; 📅 Month DD–DD, 2025</p>
+        <a href="#" class="btn-primary" target="_blank">View Bracket / GameChanger</a>
+      </div>
+
+      <!-- Full season list -->
+      <table class="schedule-table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Tournament</th>
+            <th>Location</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Add one <tr> per tournament -->
+          <tr>
+            <td>Month DD</td>
+            <td>Tournament Name</td>
+            <td>City, ST</td>
+            <td class="result-tbd">TBD</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ── TRYOUTS ───────────────────────────────────────────── -->
+  <section id="tryouts" class="tryouts section section-dark">
+    <div class="container">
+      <h2 class="section-title">Tryouts</h2>
+      <div class="tryouts-grid">
+        <div class="tryout-info">
+          <h3>Upcoming Tryout Dates</h3>
+          <ul class="tryout-list">
+            <li>
+              <span class="tryout-date">Sunday, June 28, 2026</span>
+              <span class="tryout-detail">Independence High School &nbsp;·&nbsp; 14U &nbsp;·&nbsp; 2:00 PM – 3:00 PM</span>
+            </li>
+          </ul>
+          <h3>What to Bring</h3>
+          <ul class="bring-list">
+            <li>Full softball gear (bat, glove, cleats, helmet)</li>
+            <li>Water and snacks</li>
+            <li>Completed registration form</li>
+          </ul>
+        </div>
+        <div class="tryout-form-wrap">
+          <h3>Register Interest</h3>
+          <form class="tryout-form" action="#" method="post">
+            <input type="text" name="name" placeholder="Player name" required />
+            <input type="text" name="gradyear" placeholder="Graduation year" required />
+            <input type="text" name="position" placeholder="Primary position" required />
+            <input type="email" name="email" placeholder="Parent email" required />
+            <input type="tel" name="phone" placeholder="Parent phone" />
+            <textarea name="message" placeholder="Anything else we should know?" rows="3"></textarea>
+            <button type="submit" class="btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SPONSORS ──────────────────────────────────────────── -->
+  <section id="sponsors" class="sponsors section">
+    <div class="container">
+      <h2 class="section-title">Our Sponsors</h2>
+      <p class="section-sub">Interested in sponsoring Nitro Select? <a href="#contact">Get in touch.</a></p>
+      <div class="sponsor-logos">
+        <!-- Add <img> tags for sponsor logos here -->
+        <div class="sponsor-placeholder">Sponsor Logo</div>
+        <div class="sponsor-placeholder">Sponsor Logo</div>
+        <div class="sponsor-placeholder">Sponsor Logo</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ───────────────────────────────────────────── -->
+  <section id="contact" class="contact section section-dark">
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p><strong>Email:</strong> <a href="mailto:nitroselectsoftball@gmail.com">nitroselectsoftball@gmail.com</a></p>
+          <p><strong>Coach Pedro:</strong> <a href="tel:+10000000000">(000) 000-0000</a></p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/nitroselectsoftball" target="_blank" class="social-btn">Facebook</a>
+            <a href="https://instagram.com/" target="_blank" class="social-btn">Instagram</a>
+            <a href="#" target="_blank" class="social-btn">GameChanger</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-logo"><span class="logo-nitro">NITRO</span><span class="logo-select">SELECT</span></p>
+      <p class="footer-copy">© 2025 Nitro Select Softball. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
