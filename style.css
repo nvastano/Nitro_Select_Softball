@@ -186,7 +186,8 @@ ul { list-style: none; }
 }
 .staff-photo { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; background: #333; flex-shrink: 0; }
 .staff-name { font-weight: 700; color: var(--white); margin-bottom: 2px; }
-.staff-role { font-size: .8rem; color: var(--red-light); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 10px; }
+.staff-role { font-size: .8rem; color: var(--red-light); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 6px; }
+.staff-bio { font-size: .83rem; color: rgba(255,255,255,.55); margin-bottom: 10px; max-width: 280px; line-height: 1.5; }
 
 /* ── SCHEDULE ─────────────────────────────────────────────── */
 .schedule { background: var(--white); }
