@@ -91,7 +91,7 @@ ul { list-style: none; }
   position: relative; text-align: center; color: var(--white);
   padding: 0 24px; max-width: 800px;
 }
-.hero-logo { height: 140px; width: auto; margin: 0 auto 20px; filter: drop-shadow(0 4px 16px rgba(0,0,0,.6)); }
+.hero-logo { height: 140px; width: auto; margin: 0 auto 20px; filter: drop-shadow(0 4px 16px rgba(0,0,0,.6)); mix-blend-mode: screen; }
 .hero-eyebrow {
   font-size: .8rem; font-weight: 700; text-transform: uppercase;
   letter-spacing: .18em; color: var(--red-light); margin-bottom: 16px;
