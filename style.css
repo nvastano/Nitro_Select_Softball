@@ -272,6 +272,75 @@ ul { list-style: none; }
 .footer-logo-img { height: 72px; width: auto; margin: 0 auto 12px; display: block; }
 .footer-copy { font-size: .8rem; color: rgba(255,255,255,.35); }
 
+/* ── NAV DROPDOWN ─────────────────────────────────────────── */
+.nav-dropdown { position: relative; }
+.nav-dropdown-toggle::after {
+  content: ' ▾'; font-size: .65rem; vertical-align: middle;
+  display: inline-block; margin-left: 1px;
+}
+.dropdown-menu {
+  display: none;
+  position: absolute; top: 100%; left: 50%;
+  transform: translateX(-50%);
+  background: var(--black); border: 1px solid var(--border);
+  border-top: 2px solid var(--red);
+  min-width: 220px; border-radius: 0 0 6px 6px;
+  padding: 6px 0; z-index: 200;
+}
+@media (min-width: 769px) {
+  .nav-dropdown:hover .dropdown-menu { display: block; }
+}
+.nav-dropdown.open .dropdown-menu { display: block; }
+.dropdown-menu li { border: none; }
+.dropdown-menu a {
+  display: block !important; padding: 10px 20px !important;
+  color: rgba(255,255,255,.75) !important;
+  font-size: .8rem !important; white-space: nowrap;
+  transition: background .1s, color .1s;
+}
+.dropdown-menu a:hover { background: rgba(255,255,255,.06); color: var(--white) !important; }
+.dropdown-menu a.current { color: var(--red-light) !important; }
+
+/* ── TEAM PAGE ─────────────────────────────────────────────── */
+.team-hero {
+  background: var(--black); border-bottom: 3px solid var(--red);
+  padding: calc(var(--nav-h) + 64px) 0 56px;
+  text-align: center; color: var(--white);
+}
+.team-back-link {
+  display: inline-flex; align-items: center; gap: 6px;
+  color: rgba(255,255,255,.45); font-size: .78rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .08em;
+  margin-bottom: 28px; transition: color .15s;
+}
+.team-back-link:hover { color: var(--red-light); }
+.team-hero-badge {
+  display: inline-block; background: var(--red); color: var(--white);
+  font-size: .7rem; font-weight: 800; text-transform: uppercase;
+  letter-spacing: .15em; padding: 4px 16px; border-radius: 20px;
+  margin-bottom: 16px;
+}
+.team-hero h1 {
+  font-size: clamp(2.2rem, 7vw, 4rem); font-weight: 900;
+  text-transform: uppercase; letter-spacing: .03em;
+  line-height: 1.0; margin-bottom: 10px;
+}
+.team-hero-org {
+  font-size: .95rem; color: rgba(255,255,255,.5);
+  font-weight: 600; text-transform: uppercase; letter-spacing: .1em;
+}
+
+/* ── PLAYER PLACEHOLDER (TBA) ─────────────────────────────── */
+.player-card--tba { border-style: dashed; cursor: default; }
+.player-card--tba:hover { transform: none; border-color: var(--border); }
+.player-photo-placeholder {
+  width: 100%; aspect-ratio: 3/4; background: #252525;
+  display: flex; align-items: center; justify-content: center;
+}
+.tba-icon { font-size: 2.5rem; color: rgba(255,255,255,.08); font-weight: 900; }
+.player-card--tba .player-name { color: rgba(255,255,255,.25); }
+.player-card--tba .player-pos { color: rgba(255,255,255,.18); letter-spacing: .05em; }
+
 /* ── RESPONSIVE ───────────────────────────────────────────── */
 @media (max-width: 768px) {
   .nav-toggle { display: flex; }
@@ -285,6 +354,16 @@ ul { list-style: none; }
   .nav-links li { width: 100%; }
   .nav-links a { display: block; padding: 12px 24px; font-size: .9rem; }
   .btn-nav { margin: 8px 24px; border-radius: 4px; }
+  .dropdown-menu {
+    position: static; transform: none; border: none;
+    border-radius: 0; min-width: 0; padding: 0;
+    background: rgba(255,255,255,.04);
+    border-left: 2px solid var(--red);
+    margin: 2px 24px 8px;
+  }
+  .dropdown-menu a { padding: 10px 16px !important; font-size: .85rem !important; }
+  .nav-dropdown-toggle::after { content: ' ▸'; }
+  .nav-dropdown.open .nav-dropdown-toggle::after { content: ' ▾'; }
 
   .about-grid { grid-template-columns: 1fr; gap: 36px; }
   .tryouts-grid { grid-template-columns: 1fr; gap: 0; }
