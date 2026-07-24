@@ -1,17 +1,27 @@
 // Mobile nav toggle
-const toggle = document.querySelector('.nav-toggle');
+const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
 
-toggle.addEventListener('click', () => {
+navToggle.addEventListener('click', () => {
   const open = navLinks.classList.toggle('open');
-  toggle.setAttribute('aria-expanded', open);
+  navToggle.setAttribute('aria-expanded', open);
 });
 
-// Close nav on link click (mobile)
+// Mobile dropdown toggle
+document.querySelectorAll('.nav-dropdown-toggle').forEach(trigger => {
+  trigger.addEventListener('click', e => {
+    e.preventDefault();
+    trigger.closest('.nav-dropdown').classList.toggle('open');
+  });
+});
+
+// Close nav on link click (mobile), skip dropdown triggers
 navLinks.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
+    if (link.classList.contains('nav-dropdown-toggle')) return;
     navLinks.classList.remove('open');
-    toggle.setAttribute('aria-expanded', false);
+    navToggle.setAttribute('aria-expanded', false);
+    document.querySelectorAll('.nav-dropdown.open').forEach(dd => dd.classList.remove('open'));
   });
 });
 
