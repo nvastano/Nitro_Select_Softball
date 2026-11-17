@@ -264,16 +264,21 @@ ul { list-style: none; }
 
 .tryout-form { display: flex; flex-direction: column; gap: 12px; }
 .tryout-form input,
+.tryout-form select,
 .tryout-form textarea {
   background: var(--dark2); border: 1px solid var(--border);
   color: var(--white); padding: 12px 14px; border-radius: 6px;
   font-family: var(--font); font-size: .93rem;
   transition: border-color .15s;
 }
+.tryout-form select { appearance: none; cursor: pointer; }
+.tryout-form select option { background: var(--dark2); color: var(--white); }
 .tryout-form input:focus,
+.tryout-form select:focus,
 .tryout-form textarea:focus { outline: none; border-color: var(--red); }
 .tryout-form input::placeholder,
 .tryout-form textarea::placeholder { color: rgba(255,255,255,.35); }
+.tryout-form select:invalid { color: rgba(255,255,255,.35); }
 
 /* ── SPONSORS ─────────────────────────────────────────────── */
 .sponsors { background: var(--off-white); text-align: center; }
