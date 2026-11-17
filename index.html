@@ -206,7 +206,7 @@
         </div>
         <div class="tryout-form-wrap">
           <h3>Register Interest</h3>
-          <form class="tryout-form" action="#" method="post">
+          <form class="tryout-form" id="tryoutForm">
             <input type="text" name="name" placeholder="Player name" required />
             <input type="text" name="gradyear" placeholder="Graduation year" required />
             <input type="text" name="position" placeholder="Primary position" required />
@@ -215,10 +215,12 @@
               <option value="Dec 6 – 14U Thomas/Pangallo – Independence High School (1–3 PM)">Dec 6 – 14U Thomas/Pangallo – Independence High School (1–3 PM)</option>
               <option value="Dec 12 – 14U Simmons – Nitro Sports Academy (5–7 PM)">Dec 12 – 14U Simmons – Nitro Sports Academy (5–7 PM)</option>
             </select>
+            <input type="text" name="parentname" placeholder="Parent name" required />
             <input type="email" name="email" placeholder="Parent email" required />
             <input type="tel" name="phone" placeholder="Parent phone" />
             <textarea name="message" placeholder="Anything else we should know?" rows="3"></textarea>
             <button type="submit" class="btn-primary">Submit</button>
+            <p class="form-status" id="formStatus"></p>
           </form>
         </div>
       </div>

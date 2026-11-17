@@ -40,3 +40,37 @@ const observer = new IntersectionObserver(entries => {
 }, { rootMargin: '-40% 0px -55% 0px' });
 
 sections.forEach(s => observer.observe(s));
+
+// Tryout registration form → Google Sheets
+const tryoutForm = document.getElementById('tryoutForm');
+if (tryoutForm) {
+  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwc8crNGc0q0X-GsaZD6QL9jKppXEF-EbDdB_AHVUzAFams2Q6TZMyE-UxfICR9Xg4s/exec';
+  const status = document.getElementById('formStatus');
+
+  tryoutForm.addEventListener('submit', async e => {
+    e.preventDefault();
+    const btn = tryoutForm.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+    status.textContent = '';
+
+    const data = Object.fromEntries(new FormData(tryoutForm));
+    try {
+      await fetch(SCRIPT_URL, {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: { 'Content-Type': 'application/json' },
+        mode: 'no-cors'
+      });
+      status.textContent = '✓ Registration received! We\'ll be in touch.';
+      status.style.color = '#6fcf97';
+      tryoutForm.reset();
+    } catch {
+      status.textContent = 'Something went wrong. Please email us directly.';
+      status.style.color = '#eb5757';
+    } finally {
+      btn.disabled = false;
+      btn.textContent = 'Submit';
+    }
+  });
+}
